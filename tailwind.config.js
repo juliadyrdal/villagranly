@@ -16,7 +16,10 @@ export default {
       },
       spacing: {
         'img': '40rem',
-      }
+      },
+      fontFamily: {
+        display: ['"Poiret One"', 'serif'],
+      },
     },
   },
   plugins: [],
