@@ -1,6 +1,5 @@
 <template>
     <div>
-      <!--
       <Swiper
         :style="{
             '--swiper-navigation-color': '#111827',
@@ -23,32 +22,31 @@
         </SwiperSlide>
 
       </Swiper>
-      -->
     </div>
   </template>
   
   <script setup>
-  //const swiper = useSwiper()
+    const swiper = useSwiper()
   
-  //const photoFileRoot = ref(
-   // "https://cozy-queijadas-0e6f38.netlify.app/images/gallery/granly"
-  //);
+    const photoFileRoot = ref(
+      "https://cozy-queijadas-0e6f38.netlify.app/images/gallery/granly"
+    );
   
- // const photoFileNames = ref([]);
+    const photoFileNames = ref([]);
   
-  //function formatFileNames() {
-    //for (let i = 1; i < 126; i++) {
-      //photoFileNames.value.push(photoFileRoot.value + i + ".jpg");
-    //}
-  //}
+    function formatFileNames() {
+      for (let i = 1; i < 126; i++) {
+        photoFileNames.value.push(photoFileRoot.value + i + ".jpg");
+      }
+    }
   
-  //formatFileNames();
+    formatFileNames();
   
-  //function reversePhotoFiles() {
-    //photoFileNames.value.reverse()
-  //}
+    function reversePhotoFiles() {
+      photoFileNames.value.reverse()
+    }
   
-  //reversePhotoFiles();
+    reversePhotoFiles();
   
   //     {src: 'images/gallery/_DSC1407.jpg',thumbnail: 'images/gallery/_DSC1407.jpg',w: 1200, h: 900, title: 'Stue'},
   </script>
