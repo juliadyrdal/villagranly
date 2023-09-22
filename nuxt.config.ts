@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/i18n",
     "nuxt-swiper",
+    '@nuxtjs/google-fonts',
   ],
   i18n: {
     vueI18n: "./i18n.config.ts",
@@ -33,5 +34,8 @@ export default defineNuxtConfig({
     prefix: "Swiper",
     // styleLang: 'css',
     modules: ["navigation", "pagination", "a11y", "virtual", "thumbs", "autoplay"], // all modules are imported by default
+  },
+  googleFonts: {
+    // Options
   },
 });
