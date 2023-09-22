@@ -8,11 +8,6 @@ export default {
     "./app.vue",
   ],
   theme: {
-    fontFamily: {
-      display: ["Poiret One", "serif"],
-      sans: ["Inter", "sans-serif"],
-      serif: ["Merriweather", "serif"],
-    },
     extend: {
       colors: {
         "theme-surface-light": "#F4F0EC",
