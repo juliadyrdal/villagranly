@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
     "@nuxtjs/i18n",
+    "nuxt-swiper",
   ],
   i18n: {
     vueI18n: "./i18n.config.ts",
@@ -25,5 +26,12 @@ export default defineNuxtConfig({
     detectBrowserLanguage: {
       useCookie: false,
     },
+  },
+  swiper: {
+    // Swiper options
+    //----------------------
+    prefix: "Swiper",
+    // styleLang: 'css',
+    modules: ["navigation", "pagination", "a11y", "virtual", "thumbs", "autoplay"], // all modules are imported by default
   },
 });
