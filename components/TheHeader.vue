@@ -1,3 +1,21 @@
+<script setup>
+import { ref } from "vue";
+import { Dialog, DialogPanel } from "@headlessui/vue";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+
+const emit = defineEmits(["handleInviteSubmit"])
+
+const navigation = [
+  { name: "navItem.photoGallery", href: "photogallery" },
+  { name: "navItem.features", href: "#" },
+  { name: "navItem.details", href: "#" },
+];
+
+const localePath = useLocalePath();
+
+const mobileMenuOpen = ref(false);
+</script>
+
 <template>
     <!-- Code sandbox test -->
     <header class="bg-white">
@@ -16,24 +34,22 @@
           </NuxtLink>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
+          <button @click="$emit('scrollToFeatures')"
+            class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
+            >{{ $t("navItems.features") }}</button
+          >
+          <button @click="$emit('scrollToDetails')"
+            class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
+            >{{ $t("navItems.details") }}</button
+          >
           <NuxtLink
             :to="localePath('photogallery')"
             class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
             >{{ $t("navItems.photoGallery") }}</NuxtLink
           >
-          <NuxtLink
-            :to="localePath('/')"
-            class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
-            >{{ $t("navItems.features") }}</NuxtLink
-          >
-          <NuxtLink
-            :to="localePath('/')"
-            class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
-            >{{ $t("navItems.details") }}</NuxtLink
-          >
         </div>
         <div class="flex flex-1 items-center justify-end gap-x-6">
-          <Button text="navItems.contact" />
+            <Button @click="$emit('scrollToContact')" text="navItems.contact" />
         </div>
         <div class="flex lg:hidden">
           <button
@@ -77,23 +93,21 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
+                <button
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-sans font-normal leading-7 text-theme-grey-dark"
+                  @click="mobileMenuOpen = false"
+                  ><span @click="$emit('scrollToFeatures')">{{ $t("navItems.features") }}</span></button
+                >
+                <button
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-sans font-normal leading-7 text-theme-grey-dark"
+                  @click="mobileMenuOpen = false"
+                  ><span @click="$emit('scrollToDetails')">{{ $t("navItems.details") }}</span></button
+                >
                 <NuxtLink
                   :to="localePath('photogallery')"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-sans font-normal leading-7 text-theme-grey-dark"
                   @click="mobileMenuOpen = false"
                   >{{ $t("navItems.photoGallery") }}</NuxtLink
-                >
-                <NuxtLink
-                  :to="localePath('/')"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-sans font-normal leading-7 text-theme-grey-dark"
-                  @click="mobileMenuOpen = false"
-                  >{{ $t("navItems.features") }}</NuxtLink
-                >
-                <NuxtLink
-                  :to="localePath('/')"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-sans font-normal leading-7 text-theme-grey-dark"
-                  @click="mobileMenuOpen = false"
-                  >{{ $t("navItems.details") }}</NuxtLink
                 >
               </div>
               <div class="py-6">
@@ -105,20 +119,4 @@
       </Dialog>
     </header>
   </template>
-  
-  <script setup>
-  import { ref } from "vue";
-  import { Dialog, DialogPanel } from "@headlessui/vue";
-  import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-  
-  const navigation = [
-    { name: "navItem.photoGallery", href: "photogallery" },
-    { name: "navItem.features", href: "#" },
-    { name: "navItem.details", href: "#" },
-  ];
-  
-  const localePath = useLocalePath();
-  
-  const mobileMenuOpen = ref(false);
-  </script>
   

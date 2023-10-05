@@ -6,8 +6,8 @@ export default defineI18nConfig(() => ({
         welcome: "Welcome",
         navItems: {
           photoGallery: "Photo gallery",
-          features: "Features",
-          details: "Details of sale",
+          features: "The property",
+          details: "Details",
           contact: "Contact",
         },
         links: {
@@ -62,8 +62,8 @@ export default defineI18nConfig(() => ({
         welcome: "Velkommen",
         navItems: {
           photoGallery: "Bildegalleri",
-          features: "Egenskaper",
-          details: "Salgsdetaljer",
+          features: "Eiendommen",
+          details: "Detaljer",
           contact: "Kontakt",
         },
         links: {
