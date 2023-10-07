@@ -3,6 +3,7 @@ export default defineI18nConfig(() => ({
     locale: "en",
     messages: {
       en: {
+        name: "Granly Estate",
         welcome: "Welcome",
         navItems: {
           photoGallery: "Photo gallery",
@@ -27,7 +28,7 @@ export default defineI18nConfig(() => ({
           },
         },
         features: {
-          heading: "A luxury home on the west coast",
+          heading: "Secluded luxury",
           paragraph: {
             one: "Discover a unique and distinctive villa that evokes the grandeur of Viking chieftain estates and traditional mountain farm architecture. Villa Granly is nestled within a stunning parkland with a shoreline along Kviturspollen. Its location offers complete seclusion while providing panoramic views of the sea and Hjellestad.",
             two: "The circular and partially covered courtyard creates a harmonious balance between the main house, garages, and outbuildings. The gently sloping plot leads down to the sea, where you'll find boathouses and a beautifully appointed waterfront cabin with a fantastic outdoor space. The shoreline is meticulously crafted with stone steps leading down to the water's edge.",
@@ -35,30 +36,32 @@ export default defineI18nConfig(() => ({
           },
           articles: {
             one: {
-              heading: "Living Space",
-              copy: "Total: 430 sqm (BRA), Primary Area: 239 sqm (P-rom), Secondary Area: 191 sqm (S-rom)"
+              heading: "House Specifications",
+              copy: "Total Living Area: 430 sqm, Primary Rooms: 239 sqm, Secondary Rooms: 191 sqm."
             },
             two: {
               heading: "Guest Apartment",
-              copy: "Integrated apartment for guests with a private bedroom, bathroom, and kitchen/living area."
+              copy: "An integrated suite designed for guests, complete with its own bedroom, bathroom, and a combined kitchen/living area."
             },
             three: {
               heading: "Condition",
-              copy: "A dedicated condition report is included in the sales package."
+              copy: "A comprehensive condition report has been prepared and is included in the sales dossier."
             },
             four: {
               heading: "Price",
-              copy: "This property falls into the high-end price range."
+              copy: "This residence belongs to a premium price category."
             },
           },
         },
         ctaSection: {
-         title: "Experience Villa Granly",
-         copy: "Escape to Villa Granly and experience the epitome of secluded luxury living. Contact us today to explore this exquisite Bergen, Norway, estate.",
-         cta: " Contact us to schedule a viewing", 
+         title: "Step into the Elegance of Granly Estate",
+         subtitle: "Schedule Your Viewing Today",
+         copy: "Welcome to an unparalleled expression of luxury in the heart of Bergen, Norway. Experience Villa Granly, where history meets modern elegance. Contact us today to explore this exquisite Norwegian estate.",
+         cta: "Contact us to schedule a viewing", 
         },
       },
       no: {
+        name: "Villa Granly",
         welcome: "Velkommen",
         navItems: {
           photoGallery: "Bildegalleri",
@@ -110,6 +113,7 @@ export default defineI18nConfig(() => ({
         },
         ctaSection: {
           title: "Opplev Villa Granly",
+          subtitle: "Avtal visning i dag",
           copy: "Ta kontakt i dag for å oppleve det ypperste av luksusliv på denne praktfulle eiendommen i Bergen.",
           cta: "Kontakt oss for å avtale en visning", 
          },

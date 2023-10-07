@@ -12,7 +12,7 @@ function goTo(n) {
 <template>
   <div>
     <TheHeader @scroll-to-features="goTo(features)" @scroll-to-details="goTo(details)" @scroll-to-contact="goTo(contact)" />
-    <TheHero />
+    <TheHero @scroll-to-features="goTo(features)" />
     <FeaturesSection ref="features" />
     <DetailsSection ref="details" />
     <MediaRightSection ref="contact" />

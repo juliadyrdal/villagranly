@@ -29,7 +29,7 @@ const mobileMenuOpen = ref(false);
             <p
               class="text-2xl font-bold font-display leading-6 text-theme-grey-dark"
             >
-              Villa Granly
+            {{ $t("name") }}
             </p>
           </NuxtLink>
         </div>

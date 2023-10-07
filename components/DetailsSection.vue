@@ -37,7 +37,7 @@ import {
 </script>
 
 <template>
-    <div class="mx-auto py-20 max-w-2xl sm:mt-20 lg:mt-32 lg:max-w-4xl">
+    <div class="mx-auto py-36 max-w-2xl sm:mt-20 lg:mt-32 lg:max-w-4xl">
           <dl
             class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
           >

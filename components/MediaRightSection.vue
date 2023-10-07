@@ -7,10 +7,15 @@
           <div class="px-6 lg:px-0 lg:pr-4 lg:pt-4">
             <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
               <h2
-                class="text-base uppercase font-sans font-medium leading-7 text-theme-grey-dark"
-              >
-              {{ $t("ctaSection.title") }}
-              </h2>
+            class="text-base uppercase font-sans font-light text-theme-grey-dark leading-7"
+          >
+          {{ $t("ctaSection.title") }}
+          </h2>
+          <h3
+            class="mt-2 pb-6 text-4xl font-display text-theme-grey-dark font-medium tracking-tight sm:text-5xl"
+          >
+            {{ $t("ctaSection.subtitle") }}
+        </h3>
               <p
                 class="mt-6 text-lg font-sans font-light leading-8 text-gray-600"
               >

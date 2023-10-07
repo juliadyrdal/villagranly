@@ -40,11 +40,11 @@
 <template>
     <div id="features" class="bg-white pt-24 sm:pt-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto mb-12 max-w-2xl lg:text-center">
+        <div class="mx-auto mb-12 max-w-2xl">
           <h2
             class="text-base uppercase font-sans font-light text-theme-grey-dark leading-7"
           >
-            Villa Granly
+          {{ $t("name") }}
           </h2>
           <p
             class="mt-2 pb-6 text-4xl font-display text-theme-grey-dark font-medium tracking-tight sm:text-5xl"
