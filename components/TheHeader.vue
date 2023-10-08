@@ -34,13 +34,11 @@ const mobileMenuOpen = ref(false);
           </NuxtLink>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <button @click="$emit('scrollToFeatures')"
-            class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
-            >{{ $t("navItems.features") }}</button
+          <NuxtLink to="/#features" class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
+            >{{ $t("navItems.features") }}</NuxtLink
           >
-          <button @click="$emit('scrollToDetails')"
-            class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
-            >{{ $t("navItems.details") }}</button
+          <NuxtLink to="/#details" class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
+            >{{ $t("navItems.details") }}</NuxtLink
           >
           <NuxtLink
             :to="localePath('photogallery')"
@@ -49,7 +47,9 @@ const mobileMenuOpen = ref(false);
           >
         </div>
         <div class="flex flex-1 items-center justify-end gap-x-6">
-            <Button @click="$emit('scrollToContact')" text="navItems.contact" />
+          <NuxtLink to="/#contact">
+            <Button text="navItems.contact" />
+          </NuxtLink>
         </div>
         <div class="flex lg:hidden">
           <button

@@ -2,7 +2,7 @@
 
 <template>
     <div>
-      <TheHeader @scroll-to="goTo()" />
+      <!--<TheHeader @scroll-to="goTo()" />-->
       <PageHeader
         title="pages.photoGallery.title"
         body=""

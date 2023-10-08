@@ -16,9 +16,11 @@
               <a href="mailto:christian@advokat.bergen.no">
                 <ButtonTrailing text="links.prospectus" />
               </a>
-              <button @click="$emit('scrollToFeatures')" class="text-sm font-semibold leading-6 text-gray-900"
-                >{{ $t("links.more") }} <span aria-hidden="true">→</span></button
-              >
+              <NuxtLink to="/#features">
+                <button class="text-sm font-semibold leading-6 text-gray-900"
+                  >{{ $t("links.more") }} <span aria-hidden="true">→</span></button
+                >
+              </NuxtLink>
             </div>
           </div>
         </div>

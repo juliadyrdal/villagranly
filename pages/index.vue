@@ -1,21 +1,13 @@
 <script setup>
-const features = ref(null);
-const details = ref(null);
-const contact = ref(null);
 
-function goTo(n) {
-    console.log("success" + n)
-      n.$el.scrollIntoView({behavior: "smooth"});
-}
 </script>
 
 <template>
   <div>
-    <TheHeader @scroll-to-features="goTo(features)" @scroll-to-details="goTo(details)" @scroll-to-contact="goTo(contact)" />
-    <TheHero @scroll-to-features="goTo(features)" />
-    <FeaturesSection ref="features" />
-    <DetailsSection ref="details" />
-    <MediaRightSection ref="contact" />
+    <TheHero />
+    <FeaturesSection id="features" />
+    <DetailsSection id="details" />
+    <MediaRightSection id="contact" />
   </div>
 </template>
 
