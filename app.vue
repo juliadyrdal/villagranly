@@ -9,3 +9,9 @@
     <TheFooter />
   </div>
 </template>
+
+<style>
+html, body { 
+      scroll-behavior: smooth
+    }
+</style>
