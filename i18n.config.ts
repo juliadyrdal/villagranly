@@ -3,7 +3,7 @@ export default defineI18nConfig(() => ({
     locale: "en",
     messages: {
       en: {
-        name: "Granly Estate",
+        name: "Granly Mansion",
         welcome: "Welcome",
         navItems: {
           photoGallery: "Photo gallery",
@@ -54,9 +54,9 @@ export default defineI18nConfig(() => ({
           },
         },
         ctaSection: {
-         title: "Step into the Elegance of Granly Estate",
-         subtitle: "Schedule Your Viewing Today",
-         copy: "Welcome to an unparalleled expression of luxury in the heart of Bergen, Norway. Experience Villa Granly, where history meets modern elegance. Contact us today to explore this exquisite Norwegian estate.",
+         title: "Step into the Elegance of Granly Mansion",
+         subtitle: "Schedule Your Viewing",
+         copy: "Welcome to an unparalleled expression of luxury in the heart of Bergen, Norway. Experience Granly Mansion, where history meets modern elegance. Contact us to explore this exquisite Norwegian estate.",
          cta: "Contact us to schedule a viewing", 
         },
       },
@@ -113,8 +113,8 @@ export default defineI18nConfig(() => ({
         },
         ctaSection: {
           title: "Opplev Villa Granly",
-          subtitle: "Avtal visning i dag",
-          copy: "Ta kontakt i dag for å oppleve det ypperste av luksusliv på denne praktfulle eiendommen i Bergen.",
+          subtitle: "Avtal visning",
+          copy: "Ta kontakt for å oppleve det ypperste av luksusliv på denne praktfulle eiendommen i Bergen.",
           cta: "Kontakt oss for å avtale en visning", 
          },
       },

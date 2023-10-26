@@ -16,13 +16,28 @@
         virtual
       >
         <SwiperSlide>
-          <img class="h-full object-cover" :src="heroImage" alt="" />
+          <img class="h-full object-cover" :src="imageOne" alt="" />
         </SwiperSlide>
         <SwiperSlide>
           <img class="h-full object-cover" :src="imageTwo" alt="" />
         </SwiperSlide>
         <SwiperSlide>
           <img class="h-full object-cover" :src="imageThree" alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img class="h-full object-cover" :src="imageFour" alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img class="h-full object-cover" :src="imageFive" alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img class="h-full object-cover" :src="imageSix" alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img class="h-full object-cover" :src="imageSeven" alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img class="h-full object-cover" :src="imageEight" alt="" />
         </SwiperSlide>
         <div class="absolute right-10 bottom-10 z-40">
           <ButtonPrevious class="mr-3" />
@@ -33,9 +48,14 @@
   </template>
   
   <script setup>
-  import heroImage from "@/assets/images/hero.jpg";
-  import imageTwo from "@/assets/images/hero-gallery/granly102.jpg";
-  import imageThree from "@/assets/images/hero-gallery/granly113.jpg";
+  import imageOne from "@/assets/images/granly-gallery/_DSC1752.jpg";
+  import imageTwo from "@/assets/images/granly-gallery/_DSC1761.jpg";
+  import imageThree from "@/assets/images/granly-gallery/_DSC1701.jpg";
+  import imageFour from "@/assets/images/granly-gallery/_DSC1694.jpg";
+  import imageFive from "@/assets/images/granly-gallery/_DSC1452.jpg";
+  import imageSix from "@/assets/images/granly-gallery/_DSC2097.jpg";
+  import imageSeven from "@/assets/images/granly-gallery/_DSC2130.jpg";
+  import imageEight from "@/assets/images/granly-gallery/_DSC2146.jpg";
 
   const swiper = useSwiper()
   

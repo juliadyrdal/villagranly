@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+
+</script>
 
 <template>
     <div>
@@ -7,6 +9,9 @@
         title="pages.photoGallery.title"
         body=""
       />
+      <PageSection>
+        <Tabs />
+      </PageSection>
       <PageSection>
         <PhotoGrid />
       </PageSection>
