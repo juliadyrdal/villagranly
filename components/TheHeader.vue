@@ -125,12 +125,12 @@ const mobileMenuOpen = ref(false);
                 <button
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-sans font-normal leading-7 text-theme-grey-dark"
                   @click="mobileMenuOpen = false"
-                  ><span @click="$emit('scrollToFeatures')">{{ $t("navItems.features") }}</span></button
+                  ><span @click="goToFeatures">{{ $t("navItems.features") }}</span></button
                 >
                 <button
                   class="-mx-3 block rounded-lg px-3 py-2 text-base font-sans font-normal leading-7 text-theme-grey-dark"
                   @click="mobileMenuOpen = false"
-                  ><span @click="$emit('scrollToDetails')">{{ $t("navItems.details") }}</span></button
+                  ><span @click="goToDetails">{{ $t("navItems.details") }}</span></button
                 >
                 <NuxtLink
                   :to="localePath('photogallery')"
