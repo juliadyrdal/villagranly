@@ -13,19 +13,33 @@ const navigation = [
   { name: "navItem.details", href: "#" },
 ];
 
+const { locale, locales, messages } = useI18n();
 const localePath = useLocalePath();
 const localeRoute = useLocaleRoute();
 
 function goToFeatures() {
-  router.push({ path:"/no", hash: "#features" })
+  if (locale.value === 'no') {
+    router.push({ path:"/no", hash: "#features" })
+  } else {
+    router.push({ path:"/", hash: "#features" })
+  }
+  
 }
 
 function goToDetails() {
-  router.push({ path:"/no", hash: "#details" })
+  if (locale.value === 'no') {
+    router.push({ path:"/no", hash: "#details" })
+  } else {
+    router.push({ path:"/", hash: "#details" })
+  }
 }
 
 function goToContact() {
-  router.push({ path:"/no", hash: "#contact" })
+  if (locale.value === 'no') {
+    router.push({ path:"/no", hash: "#contact" })
+  } else {
+    router.push({ path:"/", hash: "#contact" })
+  }
 }
 
 const mobileMenuOpen = ref(false);
@@ -49,10 +63,10 @@ const mobileMenuOpen = ref(false);
           </NuxtLink>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <NuxtLink @click="goToFeatures" class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
+          <NuxtLink @click="goToFeatures" class="text-sm uppercase font-normal leading-6 text-theme-grey-dark cursor-pointer"
             >{{ $t("navItems.features") }}</NuxtLink
           >
-          <NuxtLink @click="goToDetails" class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
+          <NuxtLink @click="goToDetails" class="text-sm uppercase font-normal leading-6 text-theme-grey-dark cursor-pointer"
             >{{ $t("navItems.details") }}</NuxtLink
           >
           <NuxtLink
