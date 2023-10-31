@@ -1,6 +1,13 @@
 export default defineI18nConfig(() => ({
     legacy: false,
-    locale: "en",
+    locale: 'no',
+    strategy: 'prefix_except_default',
+    defaultLocale: 'no',
+    detectBrowserLanguage: {
+      useCookie: false,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+    },
     messages: {
       en: {
         name: "Granly Mansion",

@@ -5,6 +5,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 const emit = defineEmits(["handleInviteSubmit"])
 
+const router = useRouter();
+
 const navigation = [
   { name: "navItem.photoGallery", href: "photogallery" },
   { name: "navItem.features", href: "#" },
@@ -12,6 +14,19 @@ const navigation = [
 ];
 
 const localePath = useLocalePath();
+const localeRoute = useLocaleRoute();
+
+function goToFeatures() {
+  router.push({ path:"/no", hash: "#features" })
+}
+
+function goToDetails() {
+  router.push({ path:"/no", hash: "#details" })
+}
+
+function goToContact() {
+  router.push({ path:"/no", hash: "#contact" })
+}
 
 const mobileMenuOpen = ref(false);
 </script>
@@ -34,10 +49,10 @@ const mobileMenuOpen = ref(false);
           </NuxtLink>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <NuxtLink to="/#features" class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
+          <NuxtLink @click="goToFeatures" class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
             >{{ $t("navItems.features") }}</NuxtLink
           >
-          <NuxtLink to="/#details" class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
+          <NuxtLink @click="goToDetails" class="text-sm uppercase font-normal leading-6 text-theme-grey-dark"
             >{{ $t("navItems.details") }}</NuxtLink
           >
           <NuxtLink
@@ -47,7 +62,7 @@ const mobileMenuOpen = ref(false);
           >
         </div>
         <div class="flex flex-1 items-center justify-end gap-x-6">
-          <NuxtLink to="/#contact">
+          <NuxtLink @click="goToContact">
             <Button text="navItems.contact" />
           </NuxtLink>
         </div>
