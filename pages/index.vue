@@ -6,7 +6,7 @@
   <div>
     <TheHero />
     <FeaturesSection id="features" />
-    <PhotoSlide class="w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full" />
+    <PhotoSlideFeatures class="w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full" />
     <DetailsSection id="details" />
     <MediaRightSection id="contact" />
   </div>

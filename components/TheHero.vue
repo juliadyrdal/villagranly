@@ -35,5 +35,6 @@
   
   <script setup>
   import heroImage from "@/assets/images/hero.jpg";
+  import granlyDrawing from "@/assets/images/granly-drawing.png";
   </script>
   
