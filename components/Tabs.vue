@@ -24,6 +24,7 @@
       <div class="hidden sm:block">
         <nav class="flex space-x-4" aria-label="Tabs">
           <a @click="$emit('tabEvent', tab.href); changeTab(tab)" v-for="tab in tabs" :key="tab.name" :class="[tab.current ? 'bg-white px-5 py-2 text-sm font-sans font-medium text-theme-gray-dark border-gray-600 border-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' : 'text-gray-500 hover:text-gray-700', 'px-3 py-2 text-sm font-medium cursor-pointer']" :aria-current="tab.current ? 'page' : undefined">{{ tab.name }}</a>
+          <a @click="testTab(tab)" v-for="tab in tabs" :key="tab.name" :class="[tab.current ? 'bg-white px-5 py-2 text-sm font-sans font-medium text-red-600 border-gray-600 border-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600' : 'text-gray-500 hover:text-gray-700', 'px-3 py-2 text-sm font-medium cursor-pointer']" :aria-current="tab.current ? 'page' : undefined">{{ tab.name }}</a>
         </nav>
       </div>
     </div>
@@ -32,7 +33,7 @@
   <script setup>
 import { TabList } from '@headlessui/vue';
 
-    const { locale, locales, messages } = useI18n();
+const { locale, locales, messages } = useI18n();
 
 const tabsNo = [
   { name: 'Hovedhuset interiør', href: 'main', current: true },
@@ -64,6 +65,7 @@ const tabs = computed(() => {
 })
 const tabsComp = tabs.value;
   
+const isCurrent = ref(true);
 
 function changeTab(n) {
  // for (let i = 0; i < tabs.length; i++) {
@@ -73,15 +75,28 @@ function changeTab(n) {
   //  }
  // }
  console.log('changing tabs:')
- console.log(n)
- console.log(n.current)
- for (let i = 0; i < tabsEn.length; i++) {
-  if (n.href === tabsEn[i].href) {
-    console.log(tabsEn[i].name)
+ for (let i = 0; i < tabs.value.length; i++) {
+  if (n.href === tabs.value[i].href) {
+    console.log(tabs.value[i].name)
+    return tabs.value[i].current = true;
   }
   console.log(tabsEn)
  }
+ console.log(tabs.value)
 }  
+
+function testTab(n) {
+  console.log(n.href)
+  console.log(tabs.value[2].href)
+ for (let i = 0; i < tabs.value.length; i++) {
+  
+  if (n.href === tabs.value[i].href) {
+    console.log('YES')
+  } else {
+    console.log('no')
+  }
+ }
+}
 
   console.log(tabs.value)
   </script>
