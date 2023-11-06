@@ -1,4 +1,15 @@
 <script setup>
+  
+  const galleryTabs = [
+  { nameEn: 'Main house interior', nameNo: 'Hovedhuset interiør', href: 'main', current: true },
+  { nameEn: 'Guest house', nameNo: 'Gjesteboligen', href: 'guest', current: false },
+  { nameEn: 'Annex', nameNo: 'Annekset', href: 'annex', current: false },
+  { nameEn: 'Garage', nameNo: 'Garasjen', href: 'garage', current: false },
+  { nameEn: 'Main house and park', nameNo: 'Hovedhuset og parken', href: 'park', current: false },
+  { nameEn: 'Sea house', nameNo: 'Sjøhuset', href: 'sea', current: false },
+  { nameEn: 'Boat house', nameNo: 'Nøstet', href: 'boat', current: false },
+]
+
   const mainTab = ref(true);
   const guestTab = ref(false);
   const annexTab = ref(false);
@@ -8,6 +19,12 @@
   const boatTab = ref(false);
 
   function tabSwitch(n) {
+    for (let i = 0; i < galleryTabs.length; i++) {
+   console.log('working')
+    galleryTabs[i].current = !galleryTabs.current;
+  }
+ 
+
     console.log("This is n" + n)
     mainTab.value = false;
     guestTab.value = false;
@@ -44,7 +61,7 @@
         body=""
       />
       <PageSection>
-        <Tabs @tab-event="tabSwitch" />
+        <Tabs @tab-event="tabSwitch" :galleryTabs="galleryTabs" />
       </PageSection>
       <PageSection>
         <PhotoGalleryMain v-if="mainTab===true" />
