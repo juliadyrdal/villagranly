@@ -1,4 +1,15 @@
 <script setup>
+useHead({
+  title: 'Bilder',
+})
+
+useSeoMeta({
+  title: 'Bilder',
+  ogTitle: 'Bilder',
+  description: 'Unik og særpreget villa som gir assosiasjoner til vikingetidens høvdinggårder og tradisjonell stølsarkitektur. Villa Granly er omkranset av en vakker park med strandlinje til Kviturspollen.',
+  ogDescription: 'Unik og særpreget villa som gir assosiasjoner til vikingetidens høvdinggårder og tradisjonell stølsarkitektur. Villa Granly er omkranset av en vakker park med strandlinje til Kviturspollen.',
+  ogImage: 'https://villa-granly.no/_nuxt/_DSC1694.2ee02c40.jpg',
+})
   
   const galleryTabs = [
   { nameEn: 'Main house interior', nameNo: 'Hovedhuset interiør', href: 'main', current: true },

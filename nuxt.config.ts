@@ -2,6 +2,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+  site: {
+    identity: {
+      type: 'Organization'
+    },
+    url: 'https://villa-granly.no',
+    name: 'Villa Granly',
+    description: 'Unik og særpreget villa som gir assosiasjoner til vikingetidens høvdinggårder og tradisjonell stølsarkitektur. Villa Granly er omkranset av en vakker park med strandlinje til Kviturspollen.',
+    defaultLocale: 'no',
+  },
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   modules: [
@@ -10,6 +19,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "nuxt-swiper",
     '@nuxtjs/google-fonts',
+    '@nuxtseo/module',
   ],
   i18n: {
     vueI18n: "./i18n.config.ts",
